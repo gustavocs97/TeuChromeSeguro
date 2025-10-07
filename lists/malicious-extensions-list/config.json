@@ -1,0 +1,9 @@
+{
+  "name": "malicious-extensions-list",
+  "displayName": "Malicious Extensions (palant)",
+  "url": "https://raw.githubusercontent.com/palant/malicious-extensions-list/refs/heads/main/list.txt",
+  "format": "txt",
+  "hasHeaders": false,
+  "enabled": true,
+  "localFile": "data.txt"
+}

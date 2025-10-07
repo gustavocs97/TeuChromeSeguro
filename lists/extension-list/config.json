@@ -1,0 +1,9 @@
+{
+  "name": "extension-list",
+  "displayName": "Extension List (ROMVoid95)",
+  "url": "https://gist.githubusercontent.com/ROMVoid95/80ee53b471069dcf71aaf054536c42ff/raw/351b7e5db08da3c5c0feee1dd53c9c00ef6a8952/extension-list",
+  "format": "txt",
+  "hasHeaders": false,
+  "enabled": true,
+  "localFile": "data.txt"
+}

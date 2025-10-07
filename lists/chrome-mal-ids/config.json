@@ -1,0 +1,10 @@
+{
+  "name": "chrome-mal-ids",
+  "displayName": "Chrome Malicious IDs (mallorybowes)",
+  "url": "https://raw.githubusercontent.com/mallorybowes/chrome-mal-ids/refs/heads/master/current-list.csv",
+  "format": "csv",
+  "hasHeaders": false,
+  "idColumn": 0,
+  "enabled": true,
+  "localFile": "data.csv"
+}

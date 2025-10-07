@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Extension Security Checker</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚙️ Configurações</h1>
+      <p class="subtitle">Gerenciamento de Listas de Extensões Maliciosas</p>
+    </header>
+
+    <div class="content">
+      <section class="section">
+        <h2>🔄 Atualização Automática</h2>
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="askOnOpen">
+            <span>Perguntar para atualizar ao abrir a extensão</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>📋 Listas de Extensões</h2>
+
+        <div style="margin-bottom: 15px;">
+
+          <button id="debugCacheBtn" class="btn btn-warning">
+            🔍 Ver Cache no Console
+          </button>
+
+          <button id="reloadLocalBtn" class="btn btn-secondary btn-small">
+            🔄 Recarregar Arquivos Locais
+          </button>
+        </div>
+
+        <div id="listsList"></div>
+        
+        <button id="addListBtn" class="btn btn-primary">
+          ➕ Adicionar Nova Lista
+        </button>
+      </section>
+
+      <section class="section" id="addListSection" style="display: none;">
+        <h2>➕ Nova Lista</h2>
+        <form id="addListForm">
+          <div class="form-group">
+            <label>Nome da Lista *</label>
+            <input type="text" id="listName" placeholder="Ex: minha-lista" required>
+            <small>Use apenas letras minúsculas, números e hífens</small>
+          </div>
+
+          <div class="form-group">
+            <label>URL da Fonte *</label>
+            <input type="url" id="listUrl" placeholder="https://exemplo.com/lista.csv" required>
+          </div>
+
+          <div class="form-group">
+            <label>Formato *</label>
+            <select id="listFormat" required>
+              <option value="">Selecione...</option>
+              <option value="csv">CSV</option>
+              <option value="txt">TXT</option>
+              <option value="json">JSON</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="listHasHeaders">
+              <span>Arquivo possui headers (primeira linha)</span>
+            </label>
+          </div>
+
+          <div id="csvOptions" style="display: none;">
+            <div class="form-group">
+              <label>Nome do campo ID *</label>
+              <input type="text" id="listIdField" placeholder="Ex: browser_extension_id">
+            </div>
+
+            <div class="form-group">
+              <label>Nome do campo Nome (opcional)</label>
+              <input type="text" id="listNameField" placeholder="Ex: browser_extension">
+            </div>
+
+            <div class="form-group">
+              <label>Nome do campo Categoria (opcional)</label>
+              <input type="text" id="listCategoryField" placeholder="Ex: metadata_category">
+            </div>
+
+            <div class="form-group">
+              <label>Nome do campo Tipo (opcional)</label>
+              <input type="text" id="listTypeField" placeholder="Ex: metadata_type">
+            </div>
+
+            <div class="form-group">
+              <label>Nome do campo Link (opcional)</label>
+              <input type="text" id="listLinkField" placeholder="Ex: metadata_link">
+            </div>
+
+            <div class="form-group">
+              <label>Nome do campo Comentário (opcional)</label>
+              <input type="text" id="listCommentField" placeholder="Ex: metadata_comment">
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Salvar Lista</button>
+            <button type="button" id="cancelAddBtn" class="btn btn-secondary">Cancelar</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="parser.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

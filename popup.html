@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Security Checker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔒 Security Checker</h1>
+      <p class="subtitle">Análise de Extensões Instaladas</p>
+      <div class="header-actions">
+        <button id="updateBtn" class="btn-icon" title="Atualizar listas">🔄</button>
+        <button id="settingsBtn" class="btn-icon" title="Configurações">⚙️</button>
+      </div>
+    </header>
+
+    <div id="updatePrompt" class="update-prompt" style="display: none;">
+      <div class="update-prompt-content">
+        <p>⚠️ Deseja atualizar as listas de extensões maliciosas?</p>
+        <div class="update-prompt-actions">
+          <button id="updateYes" class="btn btn-primary">Sim</button>
+          <button id="updateNo" class="btn btn-secondary">Não</button>
+          <button id="updateNever" class="btn btn-secondary">Não perguntar mais</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="summary-item safe">
+        <span class="count" id="safeCount">0</span>
+        <span class="label">Verificadas</span>
+      </div>
+      <div class="summary-item malicious">
+        <span class="count" id="maliciousCount">0</span>
+        <span class="label">Maliciosas</span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="malicious">
+        ⚠️ Maliciosas (<span id="maliciousTabCount">0</span>)
+      </button>
+      <button class="tab" data-tab="safe">
+        ✅ Verificadas (<span id="safeTabCount">0</span>)
+      </button>
+    </div>
+
+    <div class="content">
+      <div id="maliciousTab" class="tab-content active">
+        <div id="maliciousList" class="extensions-list"></div>
+      </div>
+      
+      <div id="safeTab" class="tab-content">
+        <div id="safeList" class="extensions-list"></div>
+      </div>
+    </div>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p id="loadingText">Analisando extensões...</p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="parser.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

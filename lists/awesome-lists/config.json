@@ -1,0 +1,15 @@
+{
+  "name": "awesome-lists",
+  "displayName": "Awesome Lists (mthcht)",
+  "url": "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/Browser%20Extensions/browser_extensions_list.csv",
+  "format": "csv",
+  "hasHeaders": true,
+  "idField": "browser_extension_id",
+  "nameField": "browser_extension",
+  "categoryField": "metadata_category",
+  "typeField": "metadata_type",
+  "linkField": "metadata_link",
+  "commentField": "metadata_comment",
+  "enabled": true,
+  "localFile": "data.csv"
+}
