@@ -4,9 +4,11 @@ Ferramenta para analisar extensões instaladas no navegador e cruzá-las com lis
 
 ## Capturas de tela
 
-- ![Verificação](docs/screenshots/verificacao.png)
-- ![Configurações](docs/screenshots/configuracoes.png)
-- ![Nova Lista](docs/screenshots/nova-lista.png)
+ ![Verificação](docs/screenshots/verificacao.png)
+ 
+ ![Configurações](docs/screenshots/configuracoes.png)
+ 
+ ![Nova Lista](docs/screenshots/nova-lista.png)
 
 ## Principais recursos
 - Cadastro de listas remotas (CSV e TXT) via URL “raw”
@@ -56,7 +58,7 @@ Observações:
 - mthcht (CSV): https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/Browser%20Extensions/browser_extensions_list.csv
 - palant (TXT): https://raw.githubusercontent.com/palant/malicious-extensions-list/refs/heads/main/list.txt
 - mallorybowes (CSV): https://raw.githubusercontent.com/mallorybowes/chrome-mal-ids/refs/heads/master/current-list.csv
-- ROMVoid95 (TXT): gist “raw” do autor (formato: `https://gist.githubusercontent.com/<user>/<id>/raw/<commit>/extension-list`)
+- ROMVoid95 (TXT): [ `https://gist.githubusercontent.com/ROMVoid95/80ee53b471069dcf71aaf054536c42ff/raw/351b7e5db08da3c5c0feee1dd53c9c00ef6a8952/extension-list`](https://gist.githubusercontent.com/ROMVoid95/80ee53b471069dcf71aaf054536c42ff/raw/351b7e5db08da3c5c0feee1dd53c9c00ef6a8952/extension-list)
 
 ## Uso
 - Abra a tela principal para ver o total de extensões verificadas e sinalizadas.
